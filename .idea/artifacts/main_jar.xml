@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/main_jar</output-path>
+    <root id="archive" name="main.jar">
+      <element id="module-output" name="main" />
+      <element id="extracted-dir" path="D:/Libs/gson-2.2.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Libs/dom4j-1.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Libs/httpmime-4.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Libs/gson-2.2.2.jar.zip" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Libs/httpcore-4.4.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Libs/xmlbeans-2.3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Libs/poi-3.7-20101029.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Libs/swing-worker-1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Libs/appframework-1.0.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Libs/poi-ooxml-3.7-20101029.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Libs/org.mockito.mockito-all-1.8.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Libs/poi-ooxml-schemas-3.7-20101029.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Libs/rzd.hpsm.dataconverter.file.description.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Libs/Virustotal-Public-API-V2.0-Client-master.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Libs/rzd.hpsm.dataconverter.file.description_old.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

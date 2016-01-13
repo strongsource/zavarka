@@ -33,7 +33,7 @@ public class ScannerMain{
 	 */
 	public static ArrayList<String> getFilePath(String s){
 		ArrayList<String> paths = new ArrayList<String>();
-		Pattern pathPattern = Pattern.compile("[a-zA-Z]:?(\\\\[a-zA-Z0-9 &!§$%()=`´²³{}\\[\\]._-]+)+\\\\?");
+		Pattern pathPattern = Pattern.compile("[a-zA-Z]:?(\\\\[a-zA-Z0-9 &!Â§$%()=`Ò‘Ð†Ñ–{}\\[\\]._-]+)+\\\\?");
 		Matcher matcher = pathPattern.matcher(s);
 		while(matcher.find())
 		    paths.add(matcher.group(0));
@@ -45,9 +45,11 @@ public class ScannerMain{
 	 ********************************************/
 	public static void main(String[] args){
 		try {
-			new ServicePersistance().scan();
-			new RegistryPersistence().scan();
-	        new CriticalFolderWatcher(CriticalFolderWatcher.getTempFolderPath(), true).scan(); // this thread
+			//new ServicePersistance().scan();
+			//new RegistryPersistence().scan();
+	        //new CriticalFolderWatcher(CriticalFolderWatcher.getTempFolderPath(), true).scan(); // this thread
+			SimpleScanner.scan("D:\\VIRUS\\cybertracker\\cybertracker.malwarehunterteam.com","D:\\VIRUS\\signature2.txt");
+
 		} catch (Exception e) {
 			System.out.println("Something bad happened: " + e.getMessage());
 		}

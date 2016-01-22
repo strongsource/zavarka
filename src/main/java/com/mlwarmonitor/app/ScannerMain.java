@@ -49,7 +49,7 @@ public class ScannerMain{
 			//new RegistryPersistence().scan();
 	        //new CriticalFolderWatcher(CriticalFolderWatcher.getTempFolderPath(), true).scan(); // this thread
 			SimpleScanner.scan("D:\\VIRUS\\cybertracker\\cybertracker.malwarehunterteam.com","D:\\VIRUS\\signature2.txt");
-
+			//SimpleScanner.scan("D:\\vir\\","D:\\VIRUS\\signature2.txt");
 		} catch (Exception e) {
 			System.out.println("Something bad happened: " + e.getMessage());
 		}

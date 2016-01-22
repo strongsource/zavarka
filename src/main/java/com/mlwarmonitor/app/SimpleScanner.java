@@ -95,33 +95,74 @@ public class SimpleScanner {
         }
     }
     static class  SubStringFinder {
-        static public void SSFScanner(String fileName, String sign) throws IOException {
+        static public String Classify(String str) throws IOException
+        {
+            boolean flag=false;
+            String stri;
+            BufferedReader bro = new BufferedReader(
+                    new InputStreamReader(
+                            new FileInputStream(
+                                    new File("D:\\Virus\\class1.csv"))));
+            try {
+                StringBuilder sb = new StringBuilder();
+                String line = bro.readLine();
 
+                while (line != null) {
+                    //sb.append(line);
+                    //sb.append(System.lineSeparator());
+
+                        if(line.contains(str)) {
+                            int i=line.indexOf(";");
+                            stri=line.substring(0,i-1);
+                            return stri;
+                        }
+                       // else System.out.println("ПАТТЕРН НЕ НАЙДЕН"+search.length());
+
+
+                    line = bro.readLine();
+                    //linen++;
+                }
+                //String everything = sb.toString();
+            } finally {
+                bro.close();
+            }
+            return "Неизвестный вирус";
+        }
+        static public void SSFScanner(String fileName, String sign) throws IOException {
+            int linen=1;
             BufferedReader bro = new BufferedReader(
                     new InputStreamReader(
                             new FileInputStream(
                                     new File(sign))));
 
-            String line = bro.readLine();
+            try {
+                StringBuilder sb = new StringBuilder();
+                String line = bro.readLine();
+
+                while (line != null) {
+                    //sb.append(line);
+                    //sb.append(System.lineSeparator());
+                    Path path = Paths.get(fileName);
+                    Scanner scan = new Scanner(path);
+
+                    while(scan.hasNextLine()){
+                        String search = scan.nextLine();
+
+                        if(search.contains(line)) {
+                            System.out.println("Обнаружен вирус !!!"+"\r\n"+"ЗАРАЖЕН ФАЙЛ: "+path+"В строке №:"+linen+" "+Classify(line));
+                        }
+                        else System.out.println("ПАТТЕРН НЕ НАЙДЕН");//+search.length());
+                    }
+                    line = bro.readLine();
+                    linen++;
+                }
+                //String everything = sb.toString();
+            } finally {
+                bro.close();
+            }
             //while((line = bro.readLine()) != null) {
                 //out
             //}
-
-            bro.close();
-
-
-
-            Path path = Paths.get(fileName);
-            Scanner scan = new Scanner(path);
-
-            while(scan.hasNextLine()){
-                String search = scan.nextLine();
-
-                if(search.contains(line)) {
-                    System.out.println("ПАТТЕРН НАЙДЕН");
-                }
-                else System.out.println("ПАТТЕРН НЕ НАЙДЕН"); ;
-            }
         }
 
 
